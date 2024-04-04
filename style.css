@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  /* Melhorar a aparência das fontes nos projetos */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+:root {
+  font-family: "Source Serif 4";
+  font-size: 62.5%;
+}
+
+body {
+  color: #a54328;
+  font-size: 1.6rem;
+}
+
+h1,
+h2 {
+  font-size: 2.8rem;
+  line-height: 3.6rem;
+}
+
+img {
+  width: 100%;
+
+  /* aplicando 32px de margin em cima e em baixo */
+  margin-block: 3.2rem;
+}
+
+p,
+li,
+strong {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+}
+
+h2 {
+  margin-bottom: 3.2rem;
+}
+
+main {
+  max-width: 32rem;
+  /* margin: 0 auto; */
+  margin-inline: auto; /* Another form of centralization */
+
+  padding: 5.6rem 4rem;
+
+  /* Ajuste necessário para ajustar o tamanho do conteúdo em 320px, pois o padding estava ocupando 80px */
+  box-sizing: content-box;
+
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+ul,
+ol {
+  padding-left: 2.4rem;
+  margin-bottom: 3.2rem;
+}
+
+button {
+  background: #a54328;
+  color: #fff;
+  line-height: 1.7rem;
+  border: none;
+  border-radius: 0.6rem;
+  padding: 0.8rem 1.2rem;
+
+  margin-top: 1.8rem;
+}
+
+/* versão para desktop */
+
+@media (min-width: 1120px) {
+  body {
+    background: url("./assets/background-desktop.jpg");
+  }
+
+  main {
+    flex-direction: row;
+    gap: 16.8rem;
+
+    /* ajustando a largura ao conteúdo */
+    max-width: fit-content;
+  }
+
+  .recipe {
+    max-width: 43.5rem;
+  }
+
+  .ingredients {
+    max-width: 52.5rem;
+  }
+
+  /* main > div {
+
+    //aplicando a largura por igual nas 2 divs 
+    flex: 1;
+
+    max-width: 50rem;
+  } */
+}
